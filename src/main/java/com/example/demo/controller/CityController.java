@@ -59,10 +59,9 @@ public class CityController {
         return modelAndView;
     }
     @PostMapping("/edit/{id}")
-    public ModelAndView showFormEditCity(@ModelAttribute City city){
-        ModelAndView modelAndView = new ModelAndView("listCity");
+    public String showFormEditCity(@ModelAttribute City city){
         cityService.save(city);
-        return modelAndView;
+        return "redirect:/city/";
     }
     @GetMapping("/delete/{id}")
     public String deleteCity(@PathVariable("id") Long id){

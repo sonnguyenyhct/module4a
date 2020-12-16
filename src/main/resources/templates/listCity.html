@@ -17,7 +17,7 @@
         </tr>
         <tr th:each="city,number : ${listCity}">
             <td th:text="${number.index}"></td>
-            <td><a th:text="${number.name}" th:href="@{/city/show/__${city.id}__}"></a></td>
+            <td><a th:text="${city.name}" th:href="@{/city/show/__${city.id}__}"></a></td>
             <td th:text="${city.country.name}"></td>
             <td><a th:href="@{/city/edit/__${city.id}__}">Edit</a>/<a th:href="@{/city/delete/__${city.id}__}">delete</a></td>
         </tr>

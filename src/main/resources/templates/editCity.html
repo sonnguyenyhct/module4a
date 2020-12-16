@@ -21,7 +21,7 @@
             <td>Country:</td>
             <td>
                 <select name="country">
-                    <option th:each="c : ${countrys}" th:text="${c.name}"></option>
+                    <option th:each="c : ${countrys}" th:value="${c.name}" th:text="${c.name}"></option>
                 </select>
             </td>
         </tr>
